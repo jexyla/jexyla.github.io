@@ -1,0 +1,12 @@
+# Site settings
+title: Jexyla.com
+email: jexyla@gmail.com
+description: > # this means to ignore newlines until "baseurl:"
+  Jessica Lascar's website and portfolio.
+baseurl: "/"
+url: "http://jexyla.com"
+twitter_username: jexyla
+github_username:  jexyla
+
+# Build settings
+markdown: kramdown
