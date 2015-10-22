@@ -1,12 +1,16 @@
 # Site settings
-title: Jexyla.com
+title: Jexyla
 email: jexyla@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
-  Jessica Lascar's website and portfolio.
-baseurl: "/"
-url: "http://jexyla.com"
-twitter_username: jexyla
-github_username:  jexyla
+  Write an awesome description for your new site here. You can edit this
+  line in _config.yml. It will appear in your document head meta (for
+  Google search results) and in your feed.xml site description.
+  
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://jexyla.com" # the base hostname & protocol for your site
 
 # Build settings
 markdown: kramdown
+
+# Utilities
+twitter_username: jexyla

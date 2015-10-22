@@ -3,50 +3,87 @@
 ---
 @charset "utf-8";
 
-
-
-// Our variables
-$base-font-family: Helvetica, Arial, sans-serif;
-$base-font-size:   16px;
-$small-font-size:  $base-font-size * 0.875;
-$base-line-height: 1.5;
-
 $spacing-unit:     30px;
 
-$text-color:       #111;
-$background-color: #fdfdfd;
-$brand-color:      #2a7ae2;
+$text-color:        #ffffff;
+$links-color:       #ffffff;
+$links-color-hover: #ff9c45;
+$background-color:  #4ca299;
 
-$grey-color:       #828282;
-$grey-color-light: lighten($grey-color, 40%);
-$grey-color-dark:  darken($grey-color, 25%);
+$base-font-size: 18px;
+$base-font-family: Lato, Arial;
 
-// Width of the content area
-$content-width:    800px;
+body {
+    background-color: $background-color;
+    color: $text-color;
+    font-size: $base-font-size;
+    font-family: $base-font-family;
+}
 
-$on-palm:          600px;
-$on-laptop:        800px;
+html, body, .container, .home {
+    height: 100%;
+    width: 100%;
+}
 
-
-
-// Using media queries with like this:
-// @include media-query($on-palm) {
-//     .wrapper {
-//         padding-right: $spacing-unit / 2;
-//         padding-left: $spacing-unit / 2;
-//     }
-// }
-@mixin media-query($device) {
-    @media screen and (max-width: $device) {
-        @content;
+a {
+    color: $links-color;
+    
+    &:hover {
+        color: $links-color-hover;
     }
 }
 
+/* Layout */
 
+#coming-soon {
+    text-align: center;
+    margin: $spacing-unit;
+    
+    img {
+        margin: 0 auto;
+        display: inline-block;
+    }
+    
+    #social-links {
+        margin: 20px auto;
+    }
+    
+    #coming-soon-header {
+        font-family: 'Cookie';
+        font-weight: 400;
+        font-size: 100px;
+    }
+    
+    .coming-soon-copy-container {
+        font-weight: 300;
+    }
+}
 
-// Import partials from `sass_dir` (defaults to `_sass`)
-@import
-        "base",
-        "layout",
-        "syntax-highlighting"
-;
+.container-center-vertical {
+    display: table;
+    height: 100%;
+    
+    .center-vertical {
+        display: table-cell;
+        vertical-align: middle;
+    }
+}
+
+/* Font Awesome Icons */
+
+.fa {
+    font-size: 32px;
+    margin: 0px 10px;
+}
+
+a {
+    .fa {
+        color: $text-color;
+    }
+    
+    &:hover {
+        .fa {
+            color: inherit;
+        }
+    }
+}
