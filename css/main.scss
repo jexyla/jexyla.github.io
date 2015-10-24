@@ -87,3 +87,15 @@ a {
         }
     }
 }
+
+/* iPhone 5 */
+
+@media screen and (max-width: 480px) {
+    
+    #coming-soon {
+        #coming-soon-header {
+            font-size: 50px;
+        }
+    }
+    
+}
