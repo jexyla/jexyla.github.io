@@ -30,7 +30,12 @@ $base-font-size: 14px;
 $base-font-family: Raleway, Arial;
 
 header {
-    height: 250px;
+    flex: 4 0 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -50px;
+
     color: $header-text-color;
     background-color: $header-background-color;
     background-image: -webkit-linear-gradient(355deg, $header-background-gradient-start-color 0%,
