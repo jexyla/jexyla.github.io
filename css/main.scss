@@ -1,17 +1,21 @@
 ---
 # Only the main Sass file needs front matter (the dashes are enough)
 ---
+
 @charset  "utf-8";
 
 $spacing-unit: 30px;
+$base-font-size: 14px;
+$base-line-height: 1.5;
+$base-font-family: Raleway, Arial;
 
 $white: white;
 $aquamarine: #1cb2ab;
 
 $text-color: #333333;
+$background-color: $white;
 $links-color: $aquamarine;
 $links-color-hover: darken($links-color, 20%);
-$background-color: $white;
 
 $header-text-color: $white;
 $header-links-color: $white;
@@ -25,12 +29,18 @@ $footer-links-color: #8c8ca2;
 $footer-links-color-hover: $links-color;
 $footer-background-color: #fafafa;
 
-$base-line-height: 24px;
-$base-font-size: 14px;
-$base-font-family: Raleway, Arial;
-
 body {
-  text-rendering: optimizeLegibility;
+    margin: 0;
+    padding: 0;
+    color: $text-color;
+    font-size: $base-font-size;
+    font-family: $base-font-family;
+    line-height: $base-line-height;
+    background-color: $background-color;
+    text-rendering: optimizeLegibility;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 header {
@@ -39,16 +49,12 @@ header {
     align-items: center;
     justify-content: center;
     margin-top: -50px;
-
+    line-height: normal;
     color: $header-text-color;
     background-color: $header-background-color;
-    background-image: -webkit-linear-gradient(355deg, $header-background-gradient-start-color 0%,
-                                                      $header-background-gradient-end-color 45%);
-    background-image: -o-linear-gradient(355deg, $header-background-gradient-start-color 0%,
-                                                 $header-background-gradient-end-color 45%);
-    background-image: linear-gradient(85deg, $header-background-gradient-start-color 0%,
-                                             $header-background-gradient-end-color 45%);
-
+    background-image: -webkit-linear-gradient(355deg, $header-background-gradient-start-color 0%, $header-background-gradient-end-color 45%);
+    background-image: -o-linear-gradient(355deg, $header-background-gradient-start-color 0%, $header-background-gradient-end-color 45%);
+    background-image: linear-gradient(85deg, $header-background-gradient-start-color 0%, $header-background-gradient-end-color 45%);
     mask: url("/assets/mask-bottom.svg");
     mask-size: cover;
     mask-repeat: repeat-x;
@@ -57,15 +63,16 @@ header {
     -webkit-mask-repeat: repeat-x;
 
     div {
-      height: 80%;
+        height: 80%;
     }
 
-    h1, h4 {
+    h1,
+    h4 {
         margin: 4px;
     }
 
     h1 {
-      font-family: Bitter, serif;
+        font-family: Bitter, serif;
     }
 
     h4 {
@@ -91,19 +98,6 @@ footer {
     justify-content: center;
 }
 
-body {
-    margin: 0;
-    padding: 0;
-    background-color: $background-color;
-    color: $text-color;
-    font-size: $base-font-size;
-    font-family: $base-font-family;
-    line-height: $base-line-height;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
-
 a {
     font-weight: bold;
     text-decoration: none;
@@ -127,22 +121,20 @@ footer {
 }
 
 section {
-    padding: 0 10px;
+    padding: 0 20px;
     margin: 20px auto;
     max-width: 620px;
     // fill the available space
     flex: 2 auto;
     min-height: 100%;
 }
-
 /* Icons */
-
 .flex-vertical-container {
-  // vertically and horizontally center children
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+    // vertically and horizontally center children
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .social-links {
@@ -155,12 +147,12 @@ section {
     font-size: 24px;
     margin: 0 10px;
 }
-
 /* Header */
 header img {
-  margin: 20px;
+    margin: 20px;
 }
-
 @media (max-width: 600px) {
-
+    section {
+        font-size: 18px;
+    }
 }
