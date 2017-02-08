@@ -128,7 +128,9 @@ section {
     flex: 2 auto;
     min-height: 100%;
 }
+
 /* Icons */
+
 .flex-vertical-container {
     // vertically and horizontally center children
     display: flex;
@@ -147,10 +149,13 @@ section {
     font-size: 24px;
     margin: 0 10px;
 }
+
 /* Header */
+
 header img {
-    margin: 20px;
+    margin-bottom: 20px;
 }
+
 @media (max-width: 600px) {
     section {
         font-size: 18px;
