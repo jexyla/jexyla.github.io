@@ -17,6 +17,8 @@ $header-text-color: $white;
 $header-links-color: $white;
 $header-links-color-hover: #ff9c45;
 $header-background-color: $aquamarine;
+$header-background-gradient-start-color: #5CD8D2;
+$header-background-gradient-end-color: #00B1AA;
 
 $footer-text-color: $text-color;
 $footer-links-color: #8c8ca2;
@@ -29,7 +31,42 @@ $base-font-family: Raleway, Arial;
 
 header {
     height: 250px;
+    color: $header-text-color;
     background-color: $header-background-color;
+    background-image: -webkit-linear-gradient(355deg, $header-background-gradient-start-color 0%,
+                                                      $header-background-gradient-end-color 45%);
+    background-image: -o-linear-gradient(355deg, $header-background-gradient-start-color 0%,
+                                                 $header-background-gradient-end-color 45%);
+    background-image: linear-gradient(85deg, $header-background-gradient-start-color 0%,
+                                             $header-background-gradient-end-color 45%);
+    -webkit-clip-path: polygon(0 0, 0 100%, 100% 80%, 100% 0);
+    clip-path: polygon(0 0, 0 100%, 100% 80%, 100% 0);
+
+    div {
+      height: 80%;
+    }
+
+    h1, h4 {
+        margin: 4px;
+    }
+
+    h1 {
+      font-family: Bitter, serif;
+    }
+
+    h4 {
+        font-weight: normal;
+    }
+
+    a {
+        font-weight: bold;
+        text-decoration: none;
+        color: $header-links-color;
+
+        &:hover {
+            color: $header-links-color-hover;
+        }
+    }
 }
 
 footer {
@@ -60,38 +97,6 @@ a {
 
     &:hover {
         color: $links-color-hover;
-    }
-}
-
-header {
-    -webkit-clip-path: polygon(0 0, 0 100%, 100% 80%, 100% 0);
-    clip-path: polygon(0 0, 0 100%, 100% 80%, 100% 0);
-    color: $header-text-color;
-
-    div {
-      height: 80%;
-    }
-
-    h1, h4 {
-        margin: 4px;
-    }
-
-    h1 {
-      font-family: Bitter, serif;
-    }
-
-    h4 {
-        font-weight: normal;
-    }
-
-    a {
-        font-weight: bold;
-        text-decoration: none;
-        color: $header-links-color;
-
-        &:hover {
-            color: $header-links-color-hover;
-        }
     }
 }
 
