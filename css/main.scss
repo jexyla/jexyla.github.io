@@ -5,7 +5,7 @@
 @charset  "utf-8";
 
 $spacing-unit: 30px;
-$base-font-size: 14px;
+$base-font-size: 16px;
 $base-line-height: 1.5;
 $base-font-family: Raleway, Arial;
 
@@ -71,6 +71,7 @@ header {
 
     h1 {
         font-family: Bitter, serif;
+        font-size: 40px;
     }
 
     h4 {
