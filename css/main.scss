@@ -85,6 +85,7 @@ header {
 
         &:hover {
             color: $header-links-color-hover;
+            transition: all .20s ease;
         }
     }
 }
@@ -104,6 +105,7 @@ a {
 
     &:hover {
         color: $links-color-hover;
+        transition: all .20s ease;
     }
 }
 
@@ -115,6 +117,7 @@ footer {
 
         &:hover {
             color: $footer-links-color-hover;
+            transition: all .20s ease;
         }
     }
 }
