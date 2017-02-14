@@ -2,7 +2,7 @@
 title: Jexyla
 email: jexyla@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
-Hello, I'm Jessica, UI Designer & Illustrator. 
+  Hello, I'm Jessica, UI Designer & Illustrator.
 
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://jexyla.com" # the base hostname & protocol for your site
