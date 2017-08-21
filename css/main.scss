@@ -270,7 +270,7 @@ hr {
 
 .project-description {
   h1, h2, h3 {
-    font-family: Bitter-Bold;
+    font-family: Bitter, serif;
     text-align: left;
     width: 100%;
     margin-bottom: 0;
@@ -279,7 +279,7 @@ hr {
 
 .team {
   h2 {
-  font-family: Bitter-Bold;
+  font-family: Bitter, serif;
   font-size: 16px;
   color: #8C8CA2;
   line-height: 32px;
@@ -287,7 +287,7 @@ hr {
 }
 
   p {
-    font-family: Raleway;
+    font-family: $base-font-family;
     font-size: 14px;
     color: #8C8CA2;
     line-height: 22px;
@@ -303,7 +303,7 @@ hr {
     text-align: left;
     width: 100%;
     margin-bottom: 0;
-    font-family: Bitter-Bold;
+    font-family: Bitter, serif;
     font-size: 12px;
     color: #00B1AA;
     line-height: 32px;
@@ -311,7 +311,7 @@ hr {
   }
 
   p {
-    font-family: Raleway-SemiBold;
+    font-family: $base-font-family;
     font-size: 22px;
     color: #1D2E37;
     line-height: 32px;
@@ -326,13 +326,13 @@ hr {
   padding: 80px 20px;
 
   h3 {
-    font-family: Raleway-SemiBold;
+    font-family: $base-font-family;
     font-size: 14px;
     color: #8C8CA2;
   }
 
   span {
-    font-family: Bitter-Bold;
+    font-family: Bitter, serif;
     font-size: 36px;
     color: #1D2E37;
   }
