@@ -38,7 +38,7 @@ section, p, blockquote {
 blockquote {
   @extend p;
   margin: 0;
-  padding: 40px 20px;
+  padding: 64px 20px;
 
   small {
     @extend h4;
@@ -95,6 +95,11 @@ header {
     h1, {
         font-family: Bitter, serif;
         font-size: 40px;
+    }
+
+    h3 {
+        font-family: Bitter, serif;
+        font-size: 20px;
     }
 
     h4 {
@@ -214,6 +219,29 @@ header img {
         }
 }
 
+.project-intro {
+  font-family: $base-font-family;
+  font-size: 18px;
+  color: #8C8CA2;
+  line-height: 32px;
+}
+
+.section-title {
+  font-family: Bitter, serif;
+  font-size: 20px;
+  color: #4A4A4A;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+  width: 100%;
+  padding-bottom:16px;
+  margin-bottom: 32px;
+  margin-top: 64px;
+}
+
+.section-title svg {
+  margin-right: 8px;
+}
+
 .projects-container {
   display: flex;
   flex-flow: row wrap;
@@ -266,6 +294,45 @@ hr {
 .work-card {
   margin-right: 24px;
   margin-top: 16px;
+  flex-basis: calc(50% - 24px);
+}
+
+.full {
+  flex-basis: 100%;
+}
+
+.about-me-links-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 32px;
+
+}
+
+.link-section {
+  background: #FFFFFF;
+  box-shadow: 0 0 0 1px rgba(0,0,0,0.09);
+  padding: 16px;
+  display: flex;
+  flex-basis: 250px;
+}
+
+.description {
+  margin-left: 16px;
+}
+
+.description h4 {
+  margin-bottom: 0;
+}
+
+.description  p {
+  margin-top: 0;
+}
+
+.link-section img {
+  width: 80px;
 }
 
 .project-description {
@@ -297,7 +364,7 @@ hr {
 }
 
 .project-testimonial {
-  /*background: #F8F8F8;*/
+  background: #F8F8F8;
 
   h4 {
     text-align: left;
@@ -307,6 +374,7 @@ hr {
     font-size: 12px;
     color: #00B1AA;
     line-height: 32px;
+    margin-top: 24px;
 
   }
 
@@ -316,6 +384,7 @@ hr {
     color: #1D2E37;
     line-height: 32px;
     margin-bottom: 0;
+    font-weight: 600;
   }
 }
 
