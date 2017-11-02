@@ -175,8 +175,7 @@ footer {
 
 section {
   @extend .flex-vertical-container;
-  padding: 0 20px;
-  margin: 20px auto;
+  margin: 0px auto;
   // fill the available space
   flex: 2 auto;
   min-height: 100%;
@@ -234,7 +233,7 @@ header img {
 @media (max-width: 400px) {
    header h1 {
        font-size: 32px;
-        }
+     }
 }
 
 .project-intro {
@@ -331,7 +330,7 @@ hr {
   flex-basis: 100%;
 }
 
-.about-me-links-container {
+.links-container {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
@@ -346,7 +345,26 @@ hr {
   box-shadow: 0 0 0 1px rgba(0,0,0,0.09);
   padding: 16px;
   display: flex;
-  flex-basis: 250px;
+  flex-basis: 44%;
+  align-items: center;
+}
+
+.icons-container {
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  position: relative;
+  margin-bottom: 64px;
+
+}
+
+.icon {
+  margin: 4px;
+  flex: 0 1 calc(20% - 8px);
+  font-size: 14px;
+  line-height: 24px;
+  color: #8C8CA2;
+  text-align: center;
 }
 
 .description {
