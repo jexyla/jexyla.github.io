@@ -1,37 +1,34 @@
 ---
 # Only the main Sass file needs front matter (the dashes are enough)
 ---
-
-@charset  "utf-8";
+@charset "utf-8";
+@import "spacing";
 
 $spacing-unit: 30px;
 $base-font-size: 16px;
 $base-line-height: 28px;
 $base-font-family: Raleway, Arial;
-
 $white: white;
 $aquamarine: #1cb2ab;
-
 $text-color: #333333;
 $background-color: $white;
 $links-color: $aquamarine;
 $links-color-hover: darken($links-color, 20%);
-
 $header-text-color: $white;
 $header-links-color: $white;
 $header-links-color-hover: #ff9c45;
 $header-background-color: $aquamarine;
 $header-background-gradient-start-color: #5CD8D2;
 $header-background-gradient-end-color: #00B1AA;
-
 $footer-text-color: $text-color;
 $footer-links-color: #D9D9DF;
 $footer-links-color-hover: $links-color;
 $footer-background-color: #fafafa;
-
 $max-width: 620px;
 
-section, p, blockquote {
+blockquote,
+p,
+section * {
   max-width: $max-width;
 }
 
@@ -45,23 +42,23 @@ blockquote {
     display: block;
 
     &::before {
-      content: "\2014\2002"
+      content: "\2014\2002";
     }
   }
 }
 
 body {
-    margin: 0;
-    padding: 0;
-    color: $text-color;
-    font-size: $base-font-size;
-    font-family: $base-font-family;
-    line-height: $base-line-height;
-    background-color: $background-color;
-    text-rendering: optimizeLegibility;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  color: $text-color;
+  font-size: $base-font-size;
+  font-family: $base-font-family;
+  line-height: $base-line-height;
+  background-color: $background-color;
+  text-rendering: optimizeLegibility;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 header {
@@ -106,41 +103,34 @@ header {
         margin: 0;
     }
 
-    h3 {
-        font-family: Bitter, serif;
-        font-size: 20px;
-    }
+  h3 {
+    font-family: Bitter, serif;
+    font-size: 20px;
+  }
 
-    h4 {
-        margin: 4px;
-        font-weight: normal;
-    }
+  h4 {
+    font-weight: normal;
+  }
 
-    a {
-        font-weight: bold;
-        text-decoration: none;
-        color: $header-links-color;
-
-        &:hover {
-            color: $header-links-color-hover;
-            transition: all .20s ease;
-            cursor: pointer;
-            cursor: hand;
-        }
+  a {
+    color: $header-links-color;
+    &:hover {
+      color: $header-links-color-hover;
     }
+  }
 }
 
 a {
-    font-weight: bold;
-    text-decoration: none;
-    color: $links-color;
+  font-weight: bold;
+  text-decoration: none;
+  color: $links-color;
 
-    &:hover {
-        color: $links-color-hover;
-        transition: all .20s ease;
-        cursor: pointer;
-        cursor: hand;
-    }
+  &:hover {
+    color: $links-color-hover;
+    transition: all 0.20s ease;
+    cursor: pointer;
+    cursor: hand;
+  }
 }
 
 img {
@@ -175,17 +165,22 @@ footer {
 
 section {
   @extend .flex-vertical-container;
-  margin: 0px auto;
+  @extend .pl-2;
+  @extend .pr-2;
+  width: calc(100% - 20px);
   // fill the available space
   flex: 2 auto;
   min-height: 100%;
+}
+
+.about {
+  width: 100%;
 }
 
 .full-width {
   width: 100% !important;
   min-width: 100% !important;
   max-width: 100% !important;
-
   padding: 0 !important;
   margin-left: 0 !important;
   margin-right: 0 !important;
@@ -196,44 +191,38 @@ section {
     width: 100%;
   }
 }
-
 /* Icons */
-
 .flex-vertical-container {
-    // vertically and horizontally center children
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  // vertically and horizontally center children
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .social-links {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .fa {
-    font-size: 24px;
-    margin: 0 10px;
+  font-size: 24px;
+  margin: 0 10px;
 }
-
 /* Header */
-
 header img {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
-
 @media (max-width: 600px) {
-    section {
-        font-size: 18px;
-    }
+  section {
+    font-size: 18px;
+  }
 }
-
 @media (max-width: 400px) {
-   header h1 {
-       font-size: 32px;
-     }
+  header h1 {
+    font-size: 32px;
+  }
 }
 
 .project-intro {
@@ -250,24 +239,26 @@ header img {
   text-align: left;
   border-bottom: 1px solid #eee;
   width: 100%;
-  padding-bottom:16px;
+  padding-bottom: 16px;
   margin-bottom: 32px;
   margin-top: 64px;
-}
 
-.section-title svg {
-  margin-right: 8px;
+  svg {
+    margin-right: 8px;
+  }
 }
 
 .projects-container {
   display: flex;
   flex-flow: row wrap;
-  padding: 0 32px;
 }
 
 .project-card {
-  flex: 1 0 calc(33% - 20px);
+  flex: 1 1 calc(33% - 20px);
   margin: 0 10px;
+  @media (max-width: 500px) {
+    flex-basis: 100%;
+  }
 }
 
 .view-more-link {
@@ -337,7 +328,6 @@ hr {
   justify-content: space-between;
   align-items: center;
   padding-top: 32px;
-
 }
 
 .link-section {
@@ -355,7 +345,8 @@ hr {
   flex-flow: row wrap;
   position: relative;
   margin-bottom: 64px;
-
+  align-items: baseline;
+  justify-content: center;
 }
 
 .icon {
@@ -375,7 +366,7 @@ hr {
   margin-bottom: 0;
 }
 
-.description  p {
+.description p {
   margin-top: 0;
 }
 
@@ -384,7 +375,9 @@ hr {
 }
 
 .project-description {
-  h1, h2, h3 {
+  h1,
+  h2,
+  h3 {
     font-family: Bitter, serif;
     text-align: left;
     width: 100%;
@@ -394,12 +387,12 @@ hr {
 
 .team {
   h2 {
-  font-family: Bitter, serif;
-  font-size: 16px;
-  color: #8C8CA2;
-  line-height: 32px;
-  margin-bottom: 0;
-}
+    font-family: Bitter, serif;
+    font-size: 16px;
+    color: #8C8CA2;
+    line-height: 32px;
+    margin-bottom: 0;
+  }
 
   p {
     font-family: $base-font-family;
@@ -407,7 +400,6 @@ hr {
     color: #8C8CA2;
     line-height: 22px;
     margin-top: 4px;
-
   }
 }
 
@@ -423,7 +415,6 @@ hr {
     color: #00B1AA;
     line-height: 32px;
     margin-top: 24px;
-
   }
 
   p {
