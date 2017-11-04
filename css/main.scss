@@ -3,6 +3,7 @@
 ---
 @charset "utf-8";
 @import "spacing";
+@import "mixins";
 
 $spacing-unit: 30px;
 $base-font-size: 16px;
@@ -256,7 +257,7 @@ header img {
 .project-card {
   flex: 1 1 calc(33% - 20px);
   margin: 0 10px;
-  @media (max-width: 500px) {
+  @include media-max-size(sm) {
     flex-basis: 100%;
   }
 }
@@ -322,21 +323,27 @@ hr {
 }
 
 .links-container {
+  @extend .pt-3;
+
   display: flex;
   flex-wrap: wrap;
   width: 100%;
   justify-content: space-between;
-  align-items: center;
-  padding-top: 32px;
-}
+  align-items: stretch;
 
-.link-section {
-  background: #FFFFFF;
-  box-shadow: 0 0 0 1px rgba(0,0,0,0.09);
-  padding: 16px;
-  display: flex;
-  flex-basis: 44%;
-  align-items: center;
+  .link-section {
+    background: #FFFFFF;
+    box-shadow: 0 0 0 1px rgba(0,0,0,0.09);
+    padding: 16px;
+    display: flex;
+    flex: 1 0 44%;
+    align-items: center;
+
+    img {
+      width: 80px;
+      display: block;
+    }
+  }
 }
 
 .icons-container {
@@ -368,10 +375,6 @@ hr {
 
 .description p {
   margin-top: 0;
-}
-
-.link-section img {
-  width: 80px;
 }
 
 .project-description {
