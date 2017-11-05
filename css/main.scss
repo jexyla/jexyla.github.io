@@ -140,13 +140,15 @@ img {
 }
 
 footer {
-    height: 80px;
-    background-color: $footer-background-color;
+    margin-top: 16px;
+    padding: 32px;
+
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    padding-top: 24px;
+
+    background-color: $footer-background-color;
     font-size: 14px;
     color: #8C8CA2;
 
@@ -192,6 +194,7 @@ section {
     width: 100%;
   }
 }
+
 /* Icons */
 .flex-vertical-container {
   // vertically and horizontally center children
@@ -211,10 +214,12 @@ section {
   font-size: 24px;
   margin: 0 10px;
 }
+
 /* Header */
 header img {
   margin-bottom: 20px;
 }
+
 @media (max-width: 600px) {
   section {
     font-size: 18px;
@@ -332,16 +337,30 @@ hr {
   align-items: stretch;
 
   .link-section {
+    padding: 16px;
     background: #FFFFFF;
     box-shadow: 0 0 0 1px rgba(0,0,0,0.09);
-    padding: 16px;
+
     display: flex;
-    flex: 1 0 44%;
     align-items: center;
+
+    flex: 0 0 calc(50% - 36px); // 32 accounting for padding + 4 min distance
+
+    @include media-max-size(sm) {
+      flex: 1 0 calc(100% - 32px);
+    }
 
     img {
       width: 80px;
       display: block;
+    }
+
+    .description {
+      margin-left: 16px;
+
+      * {
+        margin: 0;
+      }
     }
   }
 }
@@ -354,27 +373,15 @@ hr {
   margin-bottom: 64px;
   align-items: baseline;
   justify-content: center;
-}
 
-.icon {
-  margin: 4px;
-  flex: 0 1 calc(20% - 8px);
-  font-size: 14px;
-  line-height: 24px;
-  color: #8C8CA2;
-  text-align: center;
-}
-
-.description {
-  margin-left: 16px;
-}
-
-.description h4 {
-  margin-bottom: 0;
-}
-
-.description p {
-  margin-top: 0;
+  .icon {
+    @extend .m-2;
+    width: 100px;
+    font-size: 14px;
+    line-height: 24px;
+    color: #8C8CA2;
+    text-align: center;
+  }
 }
 
 .project-description {
