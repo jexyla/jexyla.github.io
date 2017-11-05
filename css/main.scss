@@ -89,7 +89,7 @@ header {
     }
 
     .header-image-overlay {
-      background-color: rgba(0, 0, 0, 0.3);
+      background-color: rgba(0, 0, 0, 0.6);
       position: absolute;
       height: 100%;
       width: 100%;
@@ -154,6 +154,10 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
+    padding-top: 24px;
+    font-size: 14px;
+    color: #8C8CA2;
 
     a {
         font-weight: bold;
