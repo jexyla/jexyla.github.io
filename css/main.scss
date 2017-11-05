@@ -322,7 +322,7 @@ hr {
   display: flex;
   flex-flow: row wrap;
   align-items: stretch;
-  justify-content: space-between;
+  justify-content: center;
 
   .work-card {
     flex: 1 0 calc(50% - 8px);
