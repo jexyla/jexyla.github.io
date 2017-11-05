@@ -100,10 +100,6 @@ header {
       margin-top: -40px; // visual centering bacause of the clip path
     }
 
-    h4 {
-        margin: 4px;
-    }
-
     h1 {
         font-family: Bitter, serif;
         font-size: 40px;
@@ -116,9 +112,9 @@ header {
     }
 
     h4 {
+        margin: 4px;
         font-weight: normal;
     }
-
 
     a {
         font-weight: bold;
@@ -315,6 +311,10 @@ hr {
   .work-card {
     flex: 1 0 calc(50% - 8px);
     margin: 4px;
+
+    @media screen and (max-width: 576px) {
+      flex-basis: calc(100% - 8px);
+    }
 
     img {
       object-fit: cover;
