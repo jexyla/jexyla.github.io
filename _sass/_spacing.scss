@@ -1,6 +1,8 @@
 $spacing-1: 4px;
-$spacing-2: 10px;
-$spacing-3: 20px;
+$spacing-2: 8px;
+$spacing-3: 16px;
+$spacing-4: 32px;
+$spacing-5: 64px;
 
 .ml-1 {
   margin-left: $spacing-1;
@@ -12,6 +14,14 @@ $spacing-3: 20px;
 
 .ml-3 {
   margin-left: $spacing-3;
+}
+
+.ml-4 {
+  margin-left: $spacing-4;
+}
+
+.ml-5 {
+  margin-left: $spacing-5;
 }
 
 .mr-1 {
@@ -26,6 +36,14 @@ $spacing-3: 20px;
   margin-right: $spacing-3;
 }
 
+.mr-4 {
+  margin-right: $spacing-4;
+}
+
+.mr-5 {
+  margin-right: $spacing-5;
+}
+
 .mt-1 {
   margin-top: $spacing-1;
 }
@@ -38,6 +56,14 @@ $spacing-3: 20px;
   margin-top: $spacing-3;
 }
 
+.mt-4 {
+  margin-top: $spacing-4;
+}
+
+.mt-5 {
+  margin-top: $spacing-5;
+}
+
 .mb-1 {
   margin-bottom: $spacing-1;
 }
@@ -48,6 +74,14 @@ $spacing-3: 20px;
 
 .mb-3 {
   margin-bottom: $spacing-3;
+}
+
+.mb-4 {
+  margin-bottom: $spacing-4;
+}
+
+.mb-5 {
+  margin-bottom: $spacing-5;
 }
 
 .m-1 {
@@ -71,6 +105,20 @@ $spacing-3: 20px;
   @extend .mb-3;
 }
 
+.m-4 {
+  @extend .mt-4;
+  @extend .ml-4;
+  @extend .mr-4;
+  @extend .mb-4;
+}
+
+.m-5 {
+  @extend .mt-5;
+  @extend .ml-5;
+  @extend .mr-5;
+  @extend .mb-5;
+}
+
 .pl-1 {
   padding-left: $spacing-1;
 }
@@ -81,6 +129,14 @@ $spacing-3: 20px;
 
 .pl-3 {
   padding-left: $spacing-3;
+}
+
+.pl-4 {
+  padding-left: $spacing-4;
+}
+
+.pl-5 {
+  padding-left: $spacing-5;
 }
 
 .pr-1 {
@@ -95,6 +151,14 @@ $spacing-3: 20px;
   padding-right: $spacing-3;
 }
 
+.pr-4 {
+  padding-right: $spacing-4;
+}
+
+.pr-5 {
+  padding-right: $spacing-5;
+}
+
 .pt-1 {
   padding-top: $spacing-1;
 }
@@ -107,6 +171,14 @@ $spacing-3: 20px;
   padding-top: $spacing-3;
 }
 
+.pt-4 {
+  padding-top: $spacing-4;
+}
+
+.pt-5 {
+  padding-top: $spacing-5;
+}
+
 .pb-1 {
   padding-bottom: $spacing-1;
 }
@@ -117,6 +189,14 @@ $spacing-3: 20px;
 
 .pb-3 {
   padding-bottom: $spacing-3;
+}
+
+.pb-4 {
+  padding-bottom: $spacing-4;
+}
+
+.pb-5 {
+  padding-bottom: $spacing-5;
 }
 
 .p-1 {
@@ -138,4 +218,18 @@ $spacing-3: 20px;
   @extend .pl-3;
   @extend .pr-3;
   @extend .pb-3;
+}
+
+.p-4 {
+  @extend .pt-4;
+  @extend .pl-4;
+  @extend .pr-4;
+  @extend .pb-4;
+}
+
+.p-5 {
+  @extend .pt-5;
+  @extend .pl-5;
+  @extend .pr-5;
+  @extend .pb-5;
 }

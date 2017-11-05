@@ -25,7 +25,7 @@ $footer-text-color: $text-color;
 $footer-links-color: #D9D9DF;
 $footer-links-color-hover: $links-color;
 $footer-background-color: #fafafa;
-$max-width: 620px;
+$max-width: 650px;
 
 blockquote,
 p,
@@ -63,6 +63,8 @@ body {
 }
 
 header {
+    @extend .mb-5;
+
     flex: 0 0 300px;
     position: relative;
 
@@ -170,10 +172,40 @@ section {
   @extend .flex-vertical-container;
   @extend .pl-2;
   @extend .pr-2;
+  @extend .mb-5;
+
   width: calc(100% - 20px);
   // fill the available space
   flex: 2 auto;
   min-height: 100%;
+
+  p {
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .section-title {
+    font-family: Bitter, serif;
+    font-size: 20px;
+    color: #4A4A4A;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+    width: 100%;
+    padding-bottom: 16px;
+    margin-bottom: 32px;
+
+    display: flex;
+    align-items: center;
+
+    svg {
+      margin-right: 8px;
+    }
+
+    h3 {
+      margin: 0;
+    }
+  }
 }
 
 .about {
@@ -236,22 +268,6 @@ header img {
   font-size: 18px;
   color: #8C8CA2;
   line-height: 32px;
-}
-
-.section-title {
-  font-family: Bitter, serif;
-  font-size: 20px;
-  color: #4A4A4A;
-  text-align: left;
-  border-bottom: 1px solid #eee;
-  width: 100%;
-  padding-bottom: 16px;
-  margin-bottom: 32px;
-  margin-top: 64px;
-
-  svg {
-    margin-right: 8px;
-  }
 }
 
 .projects-container {
@@ -328,8 +344,6 @@ hr {
 }
 
 .links-container {
-  @extend .pt-3;
-
   display: flex;
   flex-wrap: wrap;
   width: 100%;
@@ -355,7 +369,14 @@ hr {
       display: block;
     }
 
+    .thumbnail {
+      .icon {
+        display: block;
+      }
+    }
+
     .description {
+      flex: 0 1 auto;
       margin-left: 16px;
 
       * {
@@ -370,13 +391,12 @@ hr {
   display: flex;
   flex-flow: row wrap;
   position: relative;
-  margin-bottom: 64px;
   align-items: baseline;
   justify-content: center;
 
   .icon {
     @extend .m-2;
-    width: 100px;
+    width: 110px;
     font-size: 14px;
     line-height: 24px;
     color: #8C8CA2;
