@@ -100,27 +100,39 @@ header {
       margin-top: -40px; // visual centering bacause of the clip path
     }
 
+    h1, h2, h3, h4, h5, h6, p {
+      @extend .m-0;
+      @extend .mb-1;
+    }
+
     h1 {
         font-family: Bitter, serif;
         font-size: 40px;
-        margin: 0;
+
+        @include media-max-size(sm) {
+          font-size: 32px;
+        }
     }
 
-  h3 {
-    font-family: Bitter, serif;
-    font-size: 20px;
-  }
-
-  h4 {
-    font-weight: normal;
-  }
-
-  a {
-    color: $header-links-color;
-    &:hover {
-      color: $header-links-color-hover;
+    h3 {
+      font-family: Bitter, serif;
+      font-size: 20px;
     }
-  }
+
+    h4 {
+      font-weight: normal;
+    }
+
+    a {
+      color: $header-links-color;
+      &:hover {
+        color: $header-links-color-hover;
+      }
+    }
+
+    img {
+      @extend .mb-2;
+    }
 }
 
 a {
@@ -170,14 +182,18 @@ footer {
 
 section {
   @extend .flex-vertical-container;
-  @extend .pl-2;
-  @extend .pr-2;
+  @extend .pl-3;
+  @extend .pr-3;
   @extend .mb-5;
 
-  width: calc(100% - 20px);
+  width: calc(100% - 32px);
   // fill the available space
   flex: 2 auto;
   min-height: 100%;
+
+  @include media-max-size(sm) {
+    font-size: 18px;
+  }
 
   p {
     &:last-child {
@@ -247,22 +263,6 @@ section {
   margin: 0 10px;
 }
 
-/* Header */
-header img {
-  margin-bottom: 20px;
-}
-
-@media (max-width: 600px) {
-  section {
-    font-size: 18px;
-  }
-}
-@media (max-width: 400px) {
-  header h1 {
-    font-size: 32px;
-  }
-}
-
 .project-intro {
   font-family: $base-font-family;
   font-size: 18px;
@@ -310,14 +310,6 @@ hr {
   margin-bottom: 16px;
 }
 
-.mt-0 {
-  margin-top: 0 !important;
-}
-
-.mb-0 {
-  margin-bottom: 0 !important;
-}
-
 .work-container {
   display: flex;
   flex-flow: row wrap;
@@ -328,7 +320,7 @@ hr {
     flex: 1 0 calc(50% - 8px);
     margin: 4px;
 
-    @media screen and (max-width: 576px) {
+    @include media-max-size(sm) {
       flex-basis: calc(100% - 8px);
     }
 
