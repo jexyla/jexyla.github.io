@@ -75,6 +75,14 @@ header {
       z-index: -1;
     }
 
+    .header-image-overlay-blue {
+      background-color: rgba(0, 164, 255, 0.8);
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      z-index: -1;
+    }
+
     .header-content {
       margin-top: -40px; // visual centering bacause of the clip path
     }
@@ -159,6 +167,10 @@ footer {
     }
 }
 
+main {
+  @extend .flex-vertical-container;
+}
+
 section {
   @extend .flex-vertical-container;
   @extend .pl-3;
@@ -216,7 +228,6 @@ section {
   margin-right: 0 !important;
 
   img {
-    max-height: 500px;
     object-fit: cover;
     width: 100%;
   }
@@ -429,7 +440,7 @@ hr {
 }
 
 .contact {
-  background: #F8F8F8;
+  background: #fff;
   text-align: left;
   margin: 0;
   padding: 80px 20px;
@@ -455,4 +466,10 @@ hr {
     width: 100%;
     border: 0;
   }
+}
+
+figcaption {
+  font-size: 14px;
+  color: #8C8CA2;
+  text-align: center;
 }
