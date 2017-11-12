@@ -176,6 +176,10 @@ footer {
     }
 }
 
+main {
+  @extend .flex-vertical-container;
+}
+
 section {
   @extend .flex-vertical-container;
   @extend .pl-2;
@@ -229,7 +233,6 @@ section {
   margin-right: 0 !important;
 
   img {
-    max-height: 500px;
     object-fit: cover;
     width: 100%;
   }
@@ -316,14 +319,6 @@ hr {
   width: 30px;
   margin-top: 16px;
   margin-bottom: 16px;
-}
-
-.mt-0 {
-  margin-top: 0 !important;
-}
-
-.mb-0 {
-  margin-bottom: 0 !important;
 }
 
 .work-container {
@@ -466,7 +461,7 @@ hr {
 }
 
 .contact {
-  background: #F8F8F8;
+  background: #fff;
   text-align: left;
   margin: 0;
   padding: 80px 20px;
@@ -492,4 +487,10 @@ hr {
     width: 100%;
     border: 0;
   }
+}
+
+figcaption {
+  font-size: 14px;
+  color: #8C8CA2;
+  text-align: center;
 }
