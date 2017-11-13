@@ -266,28 +266,32 @@ section {
 }
 
 .project-card {
+  @extend .ml-2;
+  @extend .mr-2;
+
   flex: 1 1 calc(33% - 20px);
-  margin: 0 10px;
+
   @include media-max-size(sm) {
     flex-basis: 100%;
+    @include margin(2);
+  }
+
+  h4 {
+    font-family: Bitter, serif;
+    font-weight: 700;
+    margin-bottom: 0;
+    margin-top: 8px;
+  }
+
+  p {
+    margin-top: 4px;
+    color: #8C8CA2;
+    font-size: 14px;
   }
 }
 
 .view-more-link {
   text-transform: uppercase;
-  font-size: 14px;
-}
-
-.project-card h4 {
-  font-family: Bitter, serif;
-  font-weight: 700;
-  margin-bottom: 0;
-  margin-top: 8px;
-}
-
-.project-card p {
-  margin-top: 4px;
-  color: #8C8CA2;
   font-size: 14px;
 }
 

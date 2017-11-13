@@ -12,8 +12,17 @@ $spacing-alias: (
   padding: "p"
 );
 
+@function space-for-unit($unit) {
+  @return map-get($spacing, $unit);
+}
+
+@mixin margin($top, $right: $top, $bottom: $top, $left: $top) {
+  $space: space-for-unit($top);
+  margin: $space;
+}
+
 @mixin make-spacing($type, $unit) {
-  $space: map-get($spacing, $unit);
+  $space: space-for-unit($unit);
   $alias: map-get($spacing-alias, $type);
   .#{$alias}-#{$unit} {
     #{$type}: $space !important;
