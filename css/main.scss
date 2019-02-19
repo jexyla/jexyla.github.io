@@ -271,6 +271,8 @@ section {
 .projects-container {
   display: flex;
   flex-flow: row wrap;
+  align-items: stretch;
+  justify-content: center;
   margin-top: -8px;
 }
 
@@ -279,12 +281,11 @@ section {
   @extend .ml-2;
   @extend .mr-2;
 
-  flex: 1 1 calc(50% - 20px);
-  max-width: calc(50% - 20px);
+  flex: 1 0 calc(40% - 8px);
+  margin: 4px;
 
   @include media-max-size(sm) {
-    flex-basis: 100%;
-    @include margin(2);
+    flex-basis: calc(100% - 8px);
   }
 
   h4 {
