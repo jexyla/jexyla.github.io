@@ -8,6 +8,7 @@
 
 blockquote,
 p,
+section,
 section * {
   max-width: $max-width;
 }
@@ -85,6 +86,14 @@ header {
 
     .header-image-overlay-navy {
       background-color: rgba(20, 34, 61, 0.8);
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      z-index: -1;
+    }
+
+    .header-image-overlay-teal {
+      background-color: rgba(0, 92, 112, 0.8);
       position: absolute;
       height: 100%;
       width: 100%;
@@ -194,10 +203,33 @@ section {
     font-size: 18px;
   }
 
+  h1,
+  h2,
+  h3 {
+    font-family: Bitter, serif;
+    text-align: left;
+    width: 100%;
+    margin-bottom: 0.5em;
+  }
+
   p {
-    &:last-child {
-      margin-bottom: 0;
-    }
+    margin: 0 0 2em;
+  }
+
+  &:first-child {
+    margin-top: 0;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  *:first-child {
+    margin-top: 0;
+  }
+
+  *:last-child {
+    margin-bottom: 0;
   }
 
   .section-title {
@@ -221,6 +253,10 @@ section {
       margin: 0;
     }
   }
+}
+
+section.text-left {
+  align-items: flex-start;
 }
 
 .about {
@@ -269,36 +305,23 @@ section {
 }
 
 .projects-container {
-  display: flex;
-  flex-flow: row wrap;
-  align-items: stretch;
-  justify-content: center;
-  margin-top: -8px;
-}
+  max-width: 1200px;
 
-.project-card {
-  @extend .mt-2;
-  @extend .ml-2;
-  @extend .mr-2;
+  @include grid-center-last(2);
 
-  flex: 1 0 calc(40% - 8px);
-  margin: 4px;
+  .project-card {
+    h4 {
+      font-family: Bitter, serif;
+      font-weight: 700;
+      margin-bottom: 0;
+      margin-top: 8px;
+    }
 
-  @include media-max-size(sm) {
-    flex-basis: calc(100% - 8px);
-  }
-
-  h4 {
-    font-family: Bitter, serif;
-    font-weight: 700;
-    margin-bottom: 0;
-    margin-top: 8px;
-  }
-
-  p {
-    margin-top: 4px;
-    color: #8C8CA2;
-    font-size: 14px;
+    p {
+      margin-top: 4px;
+      color: #8C8CA2;
+      font-size: 14px;
+    }
   }
 }
 
@@ -405,14 +428,7 @@ hr {
 }
 
 .project-description {
-  h1,
-  h2,
-  h3 {
-    font-family: Bitter, serif;
-    text-align: left;
-    width: 100%;
-    margin-bottom: 0;
-  }
+  @extend .text-left;
 }
 
 .team {
@@ -490,4 +506,20 @@ figcaption {
   font-size: 14px;
   color: #8C8CA2;
   text-align: center;
+}
+
+.text-left {
+  text-align: left !important;
+}
+
+.text-center {
+  text-align: center !important;
+}
+
+ul {
+  margin: 0;
+}
+
+li:not(:last-child) {
+   margin-bottom: 0.5em;
 }
