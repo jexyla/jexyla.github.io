@@ -40,12 +40,14 @@ function cardColor(theme) {
 // A 16:10 card: the image contained on a tinted background; brand cover art when there's no image.
 function cardTexture(src, theme, coverCanvas, assetsReady, fit) {
   const c = document.createElement('canvas');
-  c.width = 1024;
-  c.height = 640;
+  c.width = 2048;   // retina-sized (was 1024, which looked soft)
+  c.height = 1280;
   const g = c.getContext('2d');
+  g.imageSmoothingEnabled = true;
+  g.imageSmoothingQuality = 'high';
   const tex = new THREE.CanvasTexture(c);
   tex.colorSpace = THREE.SRGBColorSpace;
-  tex.anisotropy = 8;
+  tex.anisotropy = 16;
   // If the image has an opaque background, fill the card with its corner colour so the edge disappears.
   const edgeColor = img => {
     try {
