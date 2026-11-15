@@ -29,7 +29,7 @@ export const projects = [
     summary: 'As AI-generated chats become more popular, people expect conversations to be both dynamic and engaging.',
     url: 'cleo-ai-chat-case-study.html',
     theme: { bg: '#efeaff', ink: '#1b1b1f', accent: '#6b4bff' },
-    images: [IMG + 'ai-chats-1.png'],
+    images: [IMG + 'ai-chats-cover.png'],
     imageFit: 'height',   // phones are cropped at the image's top and bottom: run them edge to edge
   },
   {

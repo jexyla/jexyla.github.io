@@ -1,5 +1,5 @@
 // Snap controller: one gesture (wheel, swipe, key, dot) moves exactly one project.
-import { projects } from '../data/projects.js';
+import { projects } from '../data/projects.js?v=2';
 import { createUI } from './ui.js?v=2';
 import { createGallery } from './gallery.js?v=2';
 import { brandArt, brandLogo, assetsReady } from './brandart.js';
