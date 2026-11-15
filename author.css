@@ -1,0 +1,83 @@
+/* Author page: the About page layout (about.css) in the author pink from jexyla.com/author. */
+.author { --pink: #fb3769; }
+
+/* Hero: pink, with the About page's colour scheme inverted onto it — "Hello, I am" in white,
+   "Jessica!" in ink, the swash in the old page's cream */
+.author .hero { background: var(--pink); }
+.author .hero-swash path { stroke: #fcf5e7; }
+
+/* Role links inside the pink header: the About page's underlined links in white, none shown as selected;
+   hover takes the About page's light-purple fill with purple text */
+.hero-roles { justify-content: center; margin-top: clamp(1.8rem, 4vh, 2.6rem); animation: fade .6s ease 1.2s both; }
+.author .hero-roles a { color: #fff; border-bottom-color: #fff; }
+.author .hero-roles a:hover, .author .hero-roles a:focus-visible { color: var(--link); background: var(--hover-bg); border-bottom-color: var(--link); }
+.author .hero-roles a:focus-visible { outline-color: #fff; }
+@keyframes fade { from { opacity: 0; transform: translateY(8px); } }
+@media (prefers-reduced-motion: reduce) { .hero-roles { animation: none; } }
+
+/* Books: full-width bands, big cover on one side and centred text on the other (alternating).
+   Each band sets --bb (background), --bb-sub (subtitle), --bb-btn / --bb-btn-ink (buttons). */
+main > section.book-band {
+  margin-top: 0; padding: clamp(3rem, 8vh, 5.5rem) clamp(20px, 7vw, 120px);
+  display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); gap: clamp(2rem, 5vw, 5rem); align-items: center;
+  background: var(--bb); color: #fff; overflow: hidden;   /* doodles around a cover may spill past the column */
+}
+main > section.book-band + section.book-band { margin-top: 0; }
+.book-band.is-flipped { grid-template-columns: minmax(0, 1.2fr) minmax(0, .8fr); }
+.book-band.is-flipped .bb-cover { order: 2; }
+.bb-cover { display: grid; place-items: center; }
+/* Both books render at the same height: --book-h is the book itself, and --pad scales images that carry
+   extra artwork around the book (Love is a Mess's doodles take ~12% of its height). */
+.book-band { --book-h: clamp(300px, 30vw, 440px); }
+.bb-cover img {
+  height: calc(var(--book-h) * var(--pad, 1)); width: auto; max-width: none; filter: drop-shadow(0 26px 30px rgba(0,0,0,.3));
+  transition: transform .7s cubic-bezier(.2,.7,.2,1);
+}
+.bb-cover:hover img { transform: scale(1.04) rotate(-2deg); }
+.bb-text { text-align: center; max-width: 720px; justify-self: center; }
+.bb-title { font: 600 clamp(2rem, 3.4vw, 3rem)/1.1 var(--serif);   /* same size as the section titles ("About me") */
+  letter-spacing: -0.02em; text-transform: uppercase; color: #fff; }
+.bb-sub { margin: 1.1rem 0 1.2rem; font: 600 clamp(.9rem, 1.2vw, 1.05rem)/1.4 var(--sans); letter-spacing: .06em; text-transform: uppercase; color: var(--bb-sub); }
+.bb-text p:not(.bb-sub) { font-size: clamp(1rem, 1.25vw, 1.1rem); line-height: 1.65; color: rgba(255,255,255,.9); margin-bottom: .9rem; }
+.bb-actions { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(12px, 2vw, 32px); margin-top: 1.8rem; }
+.bb-btn {
+  display: grid; place-items: center; min-height: 56px; padding: .8rem 1.4rem; border-radius: 999px; background: var(--bb-btn); color: var(--bb-btn-ink);
+  text-decoration: none; font-weight: 600; transition: background .2s, color .2s, transform .2s;
+}
+.bb-btn:hover, .bb-btn:focus-visible { background: #fff; color: var(--bb-btn-ink); transform: translateY(-2px); }
+.book-band a:focus-visible { outline-color: #fff; }
+@media (max-width: 800px) {
+  main > section.book-band, .book-band.is-flipped { grid-template-columns: 1fr; }
+  .book-band.is-flipped .bb-cover { order: 0; }
+  .book-band { --book-h: 300px; }
+}
+
+/* Photo strip: five rounded portraits on the lilac from jexyla.com/author */
+.photo-band {
+  margin-top: clamp(4rem, 10vh, 7rem); background: #fdb3fd;
+  display: flex; flex-wrap: wrap; justify-content: center; gap: clamp(14px, 2vw, 24px);
+  padding: clamp(2.5rem, 6vw, 4.5rem) clamp(20px, 7vw, 120px) !important;
+}
+.photo-band img {
+  width: clamp(140px, 15vw, 210px); aspect-ratio: 3 / 4; object-fit: cover; border-radius: 28px;
+  box-shadow: 0 18px 40px rgba(105, 35, 122, .18); transition: transform .4s ease;
+}
+.photo-band img:hover { transform: translateY(-6px) rotate(-1.5deg); }
+
+/* Footer: pink, white email, socials as pink icons in white circles with their handles */
+.author .connect { margin-top: 0; background: var(--pink); }
+.author .socials a { color: var(--pink); }
+.author .socials-labelled a { color: #fff; }   /* handles in white; the icon circle keeps the pink */
+.socials-labelled { flex-direction: column; gap: 12px; }
+.socials-labelled a {
+  display: inline-flex; width: auto; height: auto; gap: .9rem; background: none; color: #fff;
+  text-decoration: none; font-weight: 600; border-radius: 999px; padding: 0 1rem 0 0;
+}
+.socials-labelled .s-icon { display: grid; place-items: center; width: 44px; height: 44px; border-radius: 50%; background: #fff; color: var(--pink); transition: transform .25s, background .2s, color .2s; }
+.socials-labelled svg { width: 20px; height: 20px; }
+.author .socials-labelled a:hover, .author .socials-labelled a:focus-visible { background: none; color: #fff; transform: none; }
+.socials-labelled a:hover .s-label, .socials-labelled a:focus-visible .s-label { text-decoration: underline; text-underline-offset: 4px; }
+.socials-labelled a:hover .s-icon, .socials-labelled a:focus-visible .s-icon { background: var(--hover-bg); color: var(--link); transform: translateY(-3px); }
+.visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+@media (prefers-reduced-motion: reduce) { .bb-cover img, .photo-band img { transition: none; } }

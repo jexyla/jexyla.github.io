@@ -1,3 +1,5 @@
-_site/
-.sass-cache/
+# NEVER commit private/: it holds the unencrypted Deel case study. Only the encrypted output is published.
+private/
+dist/
 .DS_Store
+node_modules/

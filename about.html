@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>About – Jessica Lascar</title>
+<meta name="description" content="About Jessica Lascar: Senior Product Designer at Deel, author and illustrator. Experience, writing and talks.">
+<link rel="canonical" href="https://jexyla.com/about">
+<meta name="theme-color" content="#29c5c9">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/images/site/favicon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="assets/images/site/favicon-192.png">
+<link rel="apple-touch-icon" href="assets/images/site/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Jessica Lascar">
+<meta property="og:title" content="About – Jessica Lascar">
+<meta property="og:description" content="About Jessica Lascar: Senior Product Designer at Deel, author and illustrator. Experience, writing and talks.">
+<meta property="og:url" content="https://jexyla.com/about">
+<meta property="og:image" content="https://jexyla.com/assets/images/site/og-about.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Fraunces:ital,wght@0,600;1,600&family=Inter:wght@300;400;600&family=Poppins:wght@600;800&display=swap">
+<link rel="stylesheet" href="about.css">
+<script type="importmap">
+{ "imports": { "three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js" } }
+</script>
+</head>
+<body>
+<header class="top">
+  <a class="back" href="index.html"><span aria-hidden="true">←</span> Back</a>
+</header>
+
+<main>
+  <!-- Hero: as on jexyla.com — avatar, then "Hello, I am Jessica!" with the teal swash -->
+  <section class="hero">
+    <img class="hero-avatar" src="assets/images/site/avatar.png" alt="Jessica’s avatar illustration">
+    <h1 class="hero-title" aria-label="Hello, I am Jessica!">
+      <span class="line"><span><em>Hello</em>, I am</span></span>
+      <span class="line"><span class="name">Jessica!</span></span>
+    </h1>
+    <svg class="hero-swash" viewBox="0 0 340 64" aria-hidden="true">
+      <path d="M12 16 C 120 9, 230 7, 330 5" />
+      <path d="M52 52 C 140 43, 212 37, 292 33" />
+    </svg>
+  </section>
+
+  <section class="intro reveal">
+    <p class="lead">I am constantly brimming with creativity and have a deep passion for bringing ideas to life in any form.</p>
+    <nav class="roles" aria-label="What I do">
+      <a href="index.html">Product Designer</a>
+      <a href="author.html">Author</a>
+      <a href="illustrations.html">Illustrator</a>
+    </nav>
+  </section>
+
+  <!-- About me: Jessica's own words from jexyla.com -->
+  <section class="block about-me reveal">
+    <div class="about-copy">
+      <h2 class="section-title">About me</h2>
+      <p>Although I have a bachelor degree in <strong>Japanese 🇯🇵 Language and Culture</strong>, I’ve always been passionate about design and eventually managed to make a living out of it.</p>
+      <p>I like travelling a lot as I do believe that visiting different places and learning about new cultures can truly open your vision. In fact, I’ve been lucky enough to have experienced life in some awesome places. Born in <strong>Boston (USA)</strong> 🇺🇸 and raised in sunny <strong>Naples (Italy)</strong> 🇮🇹, I’ve been living in <strong>Kyoto</strong> 🇯🇵 for 3 months, over one year in Enschede <strong>(Netherlands)</strong> 🇳🇱, 5 months in <strong>Bonn (Germany)</strong> 🇩🇪 and I’m currently based in <strong>London (UK)</strong> 🇬🇧 where I work as a Senior Product Designer on the Learning team <a href="https://www.deel.com/">@Deel</a>, designing the course-creation experience. Before that, I leveraged the power of AI in user-centric chats at <a href="https://meetcleo.com/">Cleo AI</a>.</p>
+      <p><strong>When it comes to design, the most important thing to know about is that it involves other people.</strong> Great products can’t happen because of just one single person’s contribution. They are instead the result of collaboration between different roles within a company. I’ve written quite a few <a href="https://blog.prototypr.io/making-better-design-decisions-by-breaking-down-the-barriers-between-roles-ac4ffb5a00ad">articles</a> on the topic, especially about <a href="https://medium.muz.li/should-designers-code-or-should-developers-design-23e480c6700a">devs ❤ designers</a> collaboration. I’m also a hardcore <strong>Design Systems advocate</strong> and contributed both code-wise and design-wise to the <a href="https://styleguide.carwow.co.uk/pages/introduction">carwow live styleguide</a>.</p>
+      <p>When I’m not designing or writing novels, I’m on a quest to master the art of sourdough bread, occasionally dabble in crafting jewellery, and fulfil my duties as the <strong>chief tin opener for my two cats</strong>.</p>
+    </div>
+    <div class="collage">
+      <img class="c-main" src="assets/images/site/jessica-tunnel.jpg" alt="Jessica in a colourful tunnel">
+      <img class="c-cat c-cat-1" src="assets/images/aki.jpg" alt="Aki, a grey and white cat with amber eyes, lying on a kitchen counter">
+      <img class="c-cat c-cat-2" src="assets/images/kiku.jpg" alt="Kiku, a black cat with amber eyes, on a window perch">
+    </div>
+  </section>
+
+  <!-- Experience: companies, roles and dates (data/experience.js) -->
+  <section class="block reveal">
+    <div class="split">
+      <h2 class="section-title">Where I’ve worked</h2>
+      <p class="block-text">Over ten years designing in London, from a first brand identity at Gousto to AI features at Cleo and Deel.</p>
+    </div>
+    <ul class="experience" id="experience"></ul>
+  </section>
+
+  <!-- Writing, interviews and talks: from jexyla.com -->
+  <section class="block reveal">
+    <div class="split">
+      <h2 class="section-title">Writing, interviews &amp; talks</h2>
+      <p class="block-text">I’ve written about designers and developers working together, and talked about the products I’ve worked on.</p>
+    </div>
+    <div class="media-nav">
+      <button class="media-btn" type="button" data-dir="-1" aria-label="Scroll back">←</button>
+      <button class="media-btn" type="button" data-dir="1" aria-label="Scroll forward">→</button>
+    </div>
+    <ul class="media" id="media" tabindex="0" aria-label="Writing, interviews and talks">
+      <li><a href="https://www.youtube.com/watch?v=MVzZ7MvRhgw&amp;ab_channel=TheSchoolofUXDesign" style="--m:#5b3a6e"><img src="assets/images/site/talk-school-of-ux.jpg" alt=""><span class="m-type">Talk</span><span class="m-title">The School of UX Design Conference</span></a></li>
+      <li><a href="https://pod.co/tech-for-good-live/tfgl-at-bath-digital-festival" style="--m:#6e5a2e"><img src="assets/images/site/podcast-tech-for-good.png" alt=""><span class="m-type">Podcast</span><span class="m-title">Tech for Good Live at Bath Digital Festival</span></a></li>
+      <li><a href="https://www.facebook.com/watch/live/?ref=watch_permalink&amp;v=624574197888887" style="--m:#7a2f2a"><img src="assets/images/site/interview-monzo-bulletin.png" alt=""><span class="m-type">Interview</span><span class="m-title">Monzo Bulletin: Gambling Block</span></a></li>
+      <li><a href="https://medium.com/user-experience-design-1/things-to-know-when-designing-for-fintech-6aa6fe0750f5" style="--m:#25466e"><img src="assets/images/site/article-fintech.png" alt=""><span class="m-type">Article · UX Collective</span><span class="m-title">Things to know when designing for Fintech</span></a></li>
+      <li><a href="https://medium.com/prototypr/in-their-shoes-designers-understanding-developers-30096c5cb4c1" style="--m:#1f5f61"><img src="assets/images/site/article-in-their-shoes.png" alt=""><span class="m-type">Article · Prototypr</span><span class="m-title">In their shoes: designers understanding developers</span></a></li>
+      <li><a href="https://medium.com/muzli-design-inspiration/should-designers-code-or-should-developers-design-23e480c6700a" style="--m:#7a2440"><img src="assets/images/site/article-designers-code.png" alt=""><span class="m-type">Article · Muzli</span><span class="m-title">Should designers code… or should developers design?</span></a></li>
+    </ul>
+  </section>
+
+  <section class="block reveal">
+    <h2 class="section-title">Beyond product</h2>
+    <!-- Split cards side by side: a colour panel with the text, the full photo on the other side;
+         the split is the photo's edge. Colours come from each photo (author: tablecloth magenta + book-cover plum;
+         illustration: razor gold + sakura pink from the tin art). -->
+    <div class="split-cards">
+      <a class="split-card" href="author.html" style="--a:#c9338a; --b:#3d2436; --b-ink:#fff">
+        <span class="sc-text">
+          <span class="sc-eyebrow">Author</span>
+          <span class="sc-title">Fiction Author</span>
+          <span class="sc-more">Discover my books <span aria-hidden="true">→</span></span>
+        </span>
+        <img class="sc-img" src="assets/images/author.jpg" style="--pos:48% 38%" alt="Jessica at her signing table, making a peace sign beside stacks of her novel We May Be Fractured">
+      </a>
+      <a class="split-card" href="illustrations.html" style="--a:#9a6620; --b:#e9bcc4; --b-ink:#3a2410">
+        <span class="sc-text">
+          <span class="sc-eyebrow">Illustrator</span>
+          <span class="sc-title">Brand design, hand&#8209;drawing &amp; Illustrations</span>
+          <span class="sc-more">See my work <span aria-hidden="true">→</span></span>
+        </span>
+        <img class="sc-img" src="assets/images/illustrator.jpg" style="--pos:50% 55%" alt="Nomad Theory Kyoto shaving soap tin with Jessica’s hand-drawn cat and Kyoto illustration">
+      </a>
+    </div>
+  </section>
+
+
+  <footer class="connect">
+    <h2 class="connect-title">Let’s <svg class="doodle" viewBox="78 90 562 400" aria-hidden="true"><path d="M95 350 C 150 272, 255 212, 328 252 C 372 278, 310 352, 255 392 C 205 428, 192 398, 238 360 C 296 312, 360 296, 422 293 C 500 290, 568 304, 618 338"/><path d="M556 250 L620 338 L524 378"/><path d="M368 106 L380 206"/><path d="M452 136 L432 188"/><path d="M490 190 L466 220"/><path d="M402 372 L410 478 M346 437 L454 431"/></svg><em>connect!</em></h2>
+    <div class="connect-links">
+      <a class="connect-email" href="mailto:jexyla@gmail.com?subject=Hello"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h18v14H3z" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M3 6l9 7 9-7" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>Send me an email</a>
+      <ul class="socials">
+        <li><a href="https://www.twitter.com/jexyla" aria-label="@jexyla on X"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M18.24 2.25h3.31l-7.23 8.26 8.5 11.24h-6.65l-5.21-6.82-5.97 6.82H1.68l7.73-8.84L1.25 2.25h6.83l4.71 6.23zm-1.16 17.52h1.83L7.08 4.13H5.12z"/></svg></a></li>
+        <li><a href="https://www.instagram.com/jexyla" aria-label="@jexyla on Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5.2" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.4" cy="6.6" r="1.3" fill="currentColor"/></svg></a></li>
+        <li><a href="https://www.linkedin.com/in/jexyla" aria-label="@jexyla on LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M5 3.25a2.25 2.25 0 1 1 0 4.5 2.25 2.25 0 0 1 0-4.5zM3.1 9.3h3.8V21H3.1zM9.4 9.3h3.65v1.6h.05c.5-.96 1.75-1.97 3.6-1.97 3.85 0 4.56 2.53 4.56 5.83V21h-3.8v-5.5c0-1.31-.02-3-1.83-3-1.83 0-2.11 1.43-2.11 2.9V21H9.4z"/></svg></a></li>
+      </ul>
+    </div>
+  </footer>
+</main>
+
+<script type="module" src="src/about.js"></script>
+</body>
+</html>

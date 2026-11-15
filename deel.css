@@ -1,0 +1,197 @@
+/* Deel Engage Canvas case study: the components from the original page, on top of case.css.
+   Also the password screen shown before the page is unlocked. */
+.deel-page { --dp: #6a3fd8; --dlav: #e3dAf7; --dpanel: #f6f6f6; --dgrey: #737373; }
+
+/* Password screen */
+.lock {
+  min-height: 100vh; display: grid; place-items: center; padding: 120px 20px 80px;
+  background: linear-gradient(180deg, #eee7fb 0%, #f4effd 55%, #fff 100%);
+}
+.lock-card { width: min(440px, 100%); text-align: center; }
+.lock-card img { height: 30px; width: auto; margin-bottom: 1.6rem; }
+.lock-card h1 { font: 600 clamp(2rem, 4vw, 2.8rem)/1.1 var(--serif); letter-spacing: -0.02em; margin-bottom: .8rem; }
+.lock-card p { color: var(--muted); line-height: 1.6; margin-bottom: 1.6rem; }
+.lock-form { display: flex; gap: 10px; }
+.lock-form input {
+  flex: 1; min-width: 0; padding: .9rem 1.2rem; border-radius: 999px; border: 2px solid rgba(106,63,216,.35);
+  font: 400 1rem var(--sans); background: #fff; color: var(--ink);
+}
+.lock-form input:focus { outline: none; border-color: var(--dp); box-shadow: 0 0 0 4px rgba(106,63,216,.15); }
+.lock-form button {
+  padding: .9rem 1.4rem; border: 0; border-radius: 999px; background: var(--dp); color: #fff; font: 600 1rem var(--sans); cursor: pointer;
+  transition: transform .2s, background .2s;
+}
+.lock-form button:hover, .lock-form button:focus-visible { transform: translateY(-2px); background: #5531b8; }
+.lock-form button[disabled] { opacity: .6; cursor: progress; transform: none; }
+.lock-error { min-height: 1.5em; margin-top: .9rem; color: #c0262d; font-weight: 600; font-size: .95rem; }
+.lock-form.shake { animation: shake .4s; }
+@keyframes shake { 20%, 60% { transform: translateX(-8px); } 40%, 80% { transform: translateX(8px); } }
+
+/* Header: the lavender gradient from the original page, the product collage on a purple disc */
+.deel-art { position: relative; aspect-ratio: 1085 / 915; }
+.deel-art::before {
+  content: ""; position: absolute; left: 50%; top: 50%; width: 84%; aspect-ratio: 1; translate: -50% -50%; border-radius: 50%;
+  background: linear-gradient(180deg, #8f63e0 0%, #7b7be6 55%, #b9a4f3 100%);
+}
+.deel-art img { position: relative; width: 100%; height: 100%; object-fit: contain; }
+
+/* Panels */
+.deel-body .fig { background: var(--dpanel); border-radius: 24px; padding: clamp(20px, 4vw, 44px); margin: 2.4rem 0; }
+.deel-body .fig.lav { background: var(--dlav); }
+.deel-body .flow { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 10px; }
+.deel-body .flow .s { display: inline-flex; align-items: center; gap: 8px; background: #fff; border-radius: 999px; padding: 9px 18px; font: 600 .92rem var(--sans); box-shadow: 0 2px 10px rgba(0,0,0,.08); }
+.deel-body .flow .s.on { background: var(--dp); color: #fff; }
+.deel-body .flow .s svg { width: 18px; height: 18px; flex: none; color: var(--dp); }
+.deel-body .flow .s.on svg { color: #fff; }
+.deel-body .flow .a { display: inline-flex; color: var(--dp); }
+.deel-body .flow .a svg { width: 20px; height: 20px; }
+
+.deel-body .cust p { margin-bottom: 1rem; }
+.deel-body blockquote {
+  margin: 2.8rem 0; padding: clamp(24px, 4vw, 48px); background: #f0edfd; border-radius: 24px;
+  font: italic 600 clamp(1.15rem, 1.8vw, 1.45rem)/1.5 var(--serif); color: #16151a;
+}
+.deel-body .pain { list-style: none; padding: 0; margin: 0 0 1.4rem; counter-reset: p; }
+.deel-body .pain li { counter-increment: p; position: relative; padding: 0 0 1.1rem 52px; }
+.deel-body .pain li::before {
+  content: counter(p); position: absolute; left: 0; top: 0; width: 34px; height: 34px; border-radius: 50%;
+  background: var(--dp); color: #fff; font: 600 1rem/34px var(--sans); text-align: center;
+}
+.deel-body ul.l { padding-left: 1.3rem; margin: 0 0 1.4rem; }
+.deel-body ul.l li { margin-bottom: .6rem; }
+.deel-body ul.l li::marker { color: var(--dp); }
+.deel-body .note { font-size: .95rem; color: var(--dgrey); border-left: 4px solid var(--dp); padding-left: 14px; }
+
+/* Lifecycle table */
+.deel-body .tw { overflow-x: auto; }
+.deel-body table { border-collapse: collapse; width: 100%; min-width: 600px; font-size: .95rem; line-height: 1.5; background: #fff; border-radius: 12px; overflow: hidden; }
+.deel-body th, .deel-body td { text-align: left; vertical-align: top; padding: 14px 16px; border-bottom: 1px solid #e6e6e6; }
+.deel-body th { font: 600 .74rem var(--sans); letter-spacing: .14em; text-transform: uppercase; }
+.deel-body td:first-child { font-weight: 600; white-space: nowrap; color: var(--ink); }
+.deel-body td:last-child { background: #f3eefc; color: var(--ink); }
+.deel-body tr:last-child td { border-bottom: 0; }
+
+/* Two layers, metrics and stats */
+.deel-body .layers, .deel-body .mets { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+.deel-body .layer, .deel-body .met, .deel-body .stat { background: #fff; border-radius: 16px; padding: 24px 26px; box-shadow: 0 8px 28px rgba(0,0,0,.08); min-width: 0; }
+.deel-body .layer.b, .deel-body .met.n { background: var(--dp); color: #fff; }
+.deel-body .met.n { grid-column: 1 / -1; }
+.deel-body .layer .k { font: 600 .72rem var(--sans); letter-spacing: .18em; text-transform: uppercase; margin: 0 0 8px; color: inherit; }
+.deel-body .layer h4, .deel-body .met h4 { font: 600 clamp(1.3rem, 2vw, 1.7rem)/1.2 var(--serif); margin: 0 0 8px; }
+.deel-body .layer p, .deel-body .met p { font-size: .95rem; line-height: 1.55; margin: 0; color: inherit; }
+.deel-body .stats { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
+.deel-body .stat .n { font: 600 clamp(2.2rem, 4.4vw, 3.2rem)/1 var(--serif); color: var(--dp); }
+.deel-body .stat b { display: block; font-size: 1.05rem; margin: 12px 0 4px; color: var(--ink); }
+.deel-body .stat span { display: block; font-size: .92rem; color: var(--dgrey); }
+
+/* Screenshots */
+.deel-body figure.img { margin: 2.6rem 0; }
+.deel-body figure.img img { display: block; width: 100%; height: auto; border-radius: 18px; background: #f3f0fb; }
+.deel-body figure.img.flat img { border: 1px solid #e6e1f3; box-shadow: 0 12px 40px rgba(60,30,120,.12); }
+.deel-body figure.img figcaption, .deel-body .cap { font-size: .92rem; line-height: 1.5; color: var(--dgrey); text-align: center; margin-top: 14px; }
+.deel-body .gallery { display: grid; grid-template-columns: 1fr 1.13fr; gap: 18px; align-items: start; }
+.deel-body .gallery img { border: 1px solid #e6e1f3; box-shadow: 0 8px 28px rgba(60,30,120,.1); }
+.deel-body .gallery .g-a { grid-row: 1 / 3; grid-column: 2; }
+.deel-body .gallery .g-b { grid-column: 1; grid-row: 1; }
+.deel-body .gallery .g-c { grid-column: 1; grid-row: 2; }
+.deel-body .trio, .deel-body .duo { display: grid; grid-template-columns: 1fr 1fr; gap: 24px 18px; margin: 2.6rem 0; align-items: start; }
+.deel-body .trio figure.img, .deel-body .duo figure.img { margin: 0; min-width: 0; }
+.deel-body .trio figure.img:nth-child(3) { grid-column: 1 / -1; }
+.deel-body .trio figcaption, .deel-body .duo figcaption { text-align: left !important; }
+.deel-body figure.ladder { display: flow-root; }
+.deel-body figure.ladder img { width: 76%; border: 1px solid #d9d9d9; box-shadow: 0 14px 40px rgba(0,0,0,.22); position: relative; }
+.deel-body figure.ladder img:nth-of-type(2) { margin-left: 12%; margin-top: -10%; }
+.deel-body figure.ladder img:nth-of-type(3) { margin-left: 24%; margin-top: -10%; }
+.deel-body figure.gh { position: relative; }
+.deel-body .gh-badge {
+  position: absolute; top: -20px; left: -14px; z-index: 3; width: 60px; height: 60px; border-radius: 50%; background: #fff; color: #181717;
+  display: grid; place-items: center; box-shadow: 0 8px 24px rgba(0,0,0,.2);
+}
+.deel-body .gh-badge svg { width: 34px; height: 34px; }
+.deel-body .take { list-style: none; padding: 0; margin: 0; counter-reset: t; }
+.deel-body .take li { counter-increment: t; margin-bottom: 1.2rem; }
+.deel-body .take li::before { content: counter(t) ". "; font: 600 1.1rem var(--serif); color: var(--dp); }
+.deel-body img:not([src]) { visibility: hidden; aspect-ratio: 16 / 10; }   /* still decrypting */
+
+@media (max-width: 800px) {
+  .deel-meta { grid-template-columns: 1fr 1fr; }
+  .deel-body .layers, .deel-body .mets, .deel-body .stats, .deel-body .trio, .deel-body .duo, .deel-body .gallery { grid-template-columns: 1fr; }
+  .deel-body .gallery .g-a, .deel-body .gallery .g-b, .deel-body .gallery .g-c, .deel-body .trio figure.img:nth-child(3) { grid-column: auto; grid-row: auto; }
+}
+
+/* The demo video: a 16:9 box (so the page doesn't jump while it decrypts), rounded like the screenshots */
+.deel-body .video-fig video { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; border-radius: 18px; background: #16151a; box-shadow: 0 12px 40px rgba(60,30,120,.18); }
+
+/* Before / After labels: a pill sitting on top of each comparison image (above it, not over it) */
+.deel-body .tag {
+  display: inline-block; margin-bottom: .8rem; padding: .4rem .95rem; border-radius: 999px;
+  font: 600 .74rem/1 var(--sans); letter-spacing: .16em; text-transform: uppercase; color: #fff;
+}
+.deel-body .tag-before { background: #1b1b1f; }
+.deel-body .tag-after { background: var(--dp); }
+
+/* Vision sprint screens: laddered (the second steps down and to the right, overlapping the first) on a purple gradient panel */
+.deel-body .vs-ladder {
+  background: linear-gradient(135deg, #8f63e0 0%, #7b7be6 55%, #b9a4f3 100%); border-radius: 28px;
+  padding: clamp(22px, 5vw, 56px); overflow: hidden;
+}
+.deel-body figure.img .vs-ladder img {
+  display: block; width: 74%; height: auto; position: relative; border-radius: 14px;
+  border: 1px solid rgba(255,255,255,.4); box-shadow: 0 20px 48px rgba(30,10,80,.38); background: #fff;
+}
+.deel-body figure.img .vs-ladder img + img { margin-left: auto; margin-top: -9%; }
+
+/* Tool chain: Figma -> Claude -> Deel, three logos on one line with a dotted line running through them */
+.deel-body .chain {
+  --n: 96px; position: relative; display: flex; list-style: none; margin: 0 auto; padding: 0; max-width: 620px;
+}
+.deel-body .chain::before {      /* the dotted line, behind the logos, through their centres */
+  content: ""; position: absolute; left: 16.667%; right: 16.667%; top: calc(var(--n) / 2 - 3px); height: 6px; z-index: 0;
+  background: radial-gradient(circle, var(--dp) 2.2px, transparent 2.7px) 0 0 / 14px 6px repeat-x;
+}
+.deel-body .chain li { flex: 1; position: relative; z-index: 1; text-align: center; }
+.deel-body .logo-node {
+  display: grid; place-items: center; width: var(--n); height: var(--n); margin: 0 auto 14px; border-radius: 50%;
+  background: #fff; box-shadow: 0 6px 20px rgba(60, 30, 120, .16);
+}
+.deel-body .chain .on .logo-node { box-shadow: 0 0 0 4px var(--dp), 0 6px 20px rgba(60, 30, 120, .22); }
+.deel-body .logo-node svg { width: 38%; height: auto; display: block; }
+.deel-body .logo-node img { width: 62%; height: auto; display: block; }
+.deel-body .chain-label { display: block; font: 600 .98rem/1.3 var(--sans); color: var(--ink); padding: 0 6px; }
+@media (max-width: 560px) {
+  .deel-body .chain { --n: 72px; }
+  .deel-body .chain-label { font-size: .84rem; }
+}
+
+/* Tool chain: larger marks inside their circles */
+.deel-body .chain li:nth-child(1) .logo-node svg { width: 34%; }
+.deel-body .chain li:nth-child(2) .logo-node svg { width: 56%; }
+
+/* The Figma specs: on a grey "canvas" with a dot grid, with a Figma badge on the corner (like the GitHub one) */
+.deel-body .figma-board {
+  position: relative; margin: 0; padding: clamp(24px, 4vw, 44px); border-radius: 24px;
+  background-color: #ececef; background-image: radial-gradient(circle, rgba(27,27,31,.24) 1.5px, transparent 1.9px); background-size: 20px 20px;
+}
+.deel-body .figma-board .duo { margin: 0; }
+.deel-body .figma-board figcaption { color: #5a5a62; }
+.deel-body .figma-badge {
+  position: absolute; top: -22px; left: -14px; z-index: 3; width: 62px; height: 62px; border-radius: 50%; background: #fff;
+  display: grid; place-items: center; box-shadow: 0 8px 24px rgba(0,0,0,.2);
+}
+.deel-body .figma-badge svg { width: 22px; height: auto; display: block; }
+
+/* One caption below the Figma board (outside the dotted rectangle) */
+.deel-body .figma-fig { margin: 3.4rem 0 2.8rem; }
+.deel-body .figma-fig > figcaption { margin-top: 14px; text-align: center; font-size: .92rem; line-height: 1.5; color: var(--dgrey); }
+
+/* Project timeline: five icon nodes on one dotted line (same look as the tool chain) */
+.deel-body .chain.five { max-width: 860px; }
+.deel-body .chain.five::before { left: 10%; right: 10%; }
+.deel-body .icon-node { color: var(--dp); }
+.deel-body .icon-node svg { width: 40%; }
+.deel-body .chain .on .icon-node { background: var(--dp); color: #fff; box-shadow: 0 8px 22px rgba(106, 63, 216, .38); }
+@media (max-width: 560px) {
+  .deel-body .chain.five { --n: 50px; }
+  .deel-body .chain.five .chain-label { font-size: .68rem; padding: 0 2px; }
+  .deel-body .chain.five .logo-node { margin-bottom: 10px; }
+}

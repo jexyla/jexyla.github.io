@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Page not found – Jessica Lascar</title>
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#29c5c9">
+<!-- Absolute paths: hosts serve this page for any missing address, at any depth -->
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/images/site/favicon-32.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,600;1,600&family=Inter:wght@400;600&display=swap">
+<link rel="stylesheet" href="/about.css">
+<style>
+  .hero { min-height: 100vh; justify-content: center; }
+  .nf-text { margin-top: 1.4rem; color: #fff; font-size: clamp(1rem, 1.6vw, 1.25rem); max-width: 34ch; line-height: 1.5; }
+  .nf-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-top: 2rem; }
+  .nf-links a {
+    display: inline-flex; align-items: center; gap: .5rem; padding: .8rem 1.3rem; border-radius: 999px;
+    background: #fff; color: var(--link); text-decoration: none; font-weight: 600; transition: background .2s;
+  }
+  .nf-links a:hover, .nf-links a:focus-visible { background: var(--hover-bg); }
+</style>
+</head>
+<body>
+<main>
+  <section class="hero">
+    <img class="hero-avatar" src="/assets/images/site/avatar.png" alt="Jessica’s avatar illustration">
+    <h1 class="hero-title" aria-label="Oops! Page not found">
+      <span class="line"><span><em>Oops,</em> this page</span></span>
+      <span class="line"><span class="name">isn’t here!</span></span>
+    </h1>
+    <p class="nf-text">It may have moved when the site was redesigned. Try one of these instead:</p>
+    <nav class="nf-links" aria-label="Main pages">
+      <a href="/">Work</a>
+      <a href="/about">About me</a>
+      <a href="/author">Author</a>
+    </nav>
+  </section>
+</main>
+</body>
+</html>

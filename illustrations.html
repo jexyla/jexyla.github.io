@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Illustrations – Jessica Lascar</title>
+<meta name="description" content="Illustrations by Jessica Lascar. Work in progress.">
+<link rel="canonical" href="https://jexyla.com/illustrations">
+<meta name="theme-color" content="#fffae5">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/images/site/favicon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="assets/images/site/favicon-192.png">
+<link rel="apple-touch-icon" href="assets/images/site/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Jessica Lascar">
+<meta property="og:title" content="Illustrations – Jessica Lascar">
+<meta property="og:url" content="https://jexyla.com/illustrations">
+<meta property="og:image" content="https://jexyla.com/assets/images/site/og-about.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,600;1,600&family=Inter:wght@300;400;600&display=swap">
+<link rel="stylesheet" href="about.css">
+<style>
+  /* Illustrations: the cream and teal of the old page, with the four pieces in a 2×2 grid */
+  .ill { min-height: 100vh; background: #fffae5; display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); align-items: center;
+         gap: clamp(2rem, 6vw, 6rem); padding: clamp(110px, 16vh, 150px) clamp(20px, 7vw, 120px) clamp(48px, 8vh, 80px); }
+  .ill h1 { font: 600 clamp(2.6rem, 5.4vw, 4.8rem)/1.05 var(--serif); letter-spacing: -0.02em; color: #2fa9b7; }
+  .ill p { margin-top: 1.2rem; font-size: clamp(1.05rem, 1.5vw, 1.25rem); color: var(--muted); max-width: 32ch; line-height: 1.6; }
+  .ill-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0; border-radius: 24px; overflow: hidden; box-shadow: 0 30px 60px rgba(0, 0, 0, .1); }
+  .ill-grid img { display: block; width: 100%; height: auto; transition: transform .5s cubic-bezier(.2,.7,.2,1); }
+  .ill-grid img:hover { transform: scale(1.04); }
+  @media (max-width: 800px) { .ill { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<header class="top">
+  <a class="back" href="about.html"><span aria-hidden="true">←</span> About</a>
+</header>
+<main>
+  <section class="ill">
+    <div>
+      <h1>Illustrations</h1>
+      <p>Work in progress...</p>
+    </div>
+    <div class="ill-grid">
+      <img src="assets/illustrations/illustration-1.png" alt="Illustration: a smiling slice of pizza" width="720" height="540">
+      <img src="assets/illustrations/illustration-2.png" alt="Illustration: a smiling cup of coffee with a croissant" width="720" height="540">
+      <img src="assets/illustrations/illustration-3.png" alt="Illustration: a smiling glass of spritz with an orange slice" width="720" height="540">
+      <img src="assets/illustrations/illustration-4.png" alt="Illustration: line-drawn food icons on green" width="720" height="540">
+    </div>
+  </section>
+</main>
+</body>
+</html>
