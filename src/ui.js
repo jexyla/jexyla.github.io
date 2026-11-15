@@ -127,6 +127,8 @@ export function createUI(projects, { reduceMotion, coverURL, logoURL, onDot }) {
     document.body.classList.toggle('others-open', on);
     others.inert = !on;
     others.setAttribute('aria-hidden', String(!on));
+    // The Gousto animation only plays while the sheet is open
+    others.querySelectorAll('video').forEach(v => { if (on) v.play().catch(() => {}); else v.pause(); });
   }
 
   return { show, refreshThumb, showFallback, setFallbackImages, showFooter, showOthers };
