@@ -21,7 +21,7 @@ export const projects = [
     summary: 'Chatbots have come a long way. They’re no longer just scripted responses. Today, they can hold intelligent conversations thanks to LLMs.',
     url: 'cleo-ai-prompt-engineering-case-study.html',
     theme: { bg: '#2414b8', ink: '#ffffff', accent: '#3ef2a0' },
-    images: [IMG + 'cleo-1.png', IMG + 'cleo-2.png', IMG + 'cleo-3.png', IMG + 'cleo-4.png'],
+    images: [IMG + 'cleo-cover.png', IMG + 'cleo-2.png', IMG + 'cleo-3.png', IMG + 'cleo-4.png'],
   },
   {
     id: 'ai-chats', brand: 'cleo-chat', color: '#6b4bff', company: 'Cleo', title: 'Designing for\nAI-generated Chats',
