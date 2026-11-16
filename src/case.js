@@ -1,5 +1,5 @@
 // Case-study pages: brand colours, logo and cover from the landing page's data, the next-project card, header, reveals.
-import { projects } from '../data/projects.js';
+import { projects } from '../data/projects.js?v=4';
 import { brandLogo, assetsReady } from './brandart.js';
 
 // Scroll reveals run first, so content can never be left hidden if something later fails.
